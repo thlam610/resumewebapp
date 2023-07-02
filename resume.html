@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LamCV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-container {
+      display: flex;
+      margin-bottom: 20px;
+      background-color: lightgray;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .details {
+      text-align: center;
+    }
+
+    .details h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .details p {
+      margin: 5px 0;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .note {
+      font-size: 14px;
+      font-style: italic;  
+    }
+
+    .contact-details p {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .contact-details a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    .section-content {
+      margin-top: 10px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;  
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .item .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .item .name {
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .item .time {
+      text-align: right;
+      font-size: 18px;
+    }
+
+    .item .content {
+      text-align: justify;
+      margin-top: 5px;
+    }
+
+    .item:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="profile-container">
+        <img class="profile-pic" src="pic34.jpg" alt="Profile Picture">
+  
+        <div class="details">
+          <h1>Tran Hoang Lam</h1>
+          <p><span class="bold">Date of Birth:</span> October 6, 2001</p>
+          <p><span class="bold">Address:</span> 205/61/9 Tran Van Dang Street, Ward 11, District 3, Ho Chi Minh city, Vietnam</p>
+          <p><a href="https://www.linkedin.com/">https://www.linkedin.com/in/hoang-lam-tran-356b6a238/</a></p>
+          <p><span class="bold">Phone:</span> (+84) 902330199</p>
+          <p><span class="bold">Email:</span> <a href="mailto:your_email@example.com">lam6102001@gmail.com</a></p>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Ho Chi Minh City University of Technology</span></p>
+              <p class="time">2019 - present</p>
+            </div>
+            <p class="content"><span class="italic">Major:</span> Electrical and Electronic Engineering</p>
+            <p class="content"><span class="italic">Degree:</span> Bachelor</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-content">
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Digital Scale by using STM32</span></p>
+              <p class="time"><span class="italic">Duration: </span>3 weeks</p>
+            </div>
+            <p class="content"><span class="note">Teamwork project - Team size: 4</span></p>
+            <p class="content">We used HX711 to read value of Loadcell, then I read the SPI 24bits output from HX711 and calibrating that output values and converting to gram.</p>
+            <p class="content"><span class="italic">Role: </span>Calcualting average output value and calibrating.</p>
+            <p class="content"><span class="italic">Programming languages used: </span>C</p>
+          </div>
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Auto Avoding Obstacles Vehicle</span></p>
+              <p class="time"><span class="italic">Duration: </span>4 months</p>
+            </div>
+            <p class="content"><span class="note">https://github.com/thlam610/agv</span></p>
+            <p class="content">The vehicle is controlled by raspberrypi3 model B+, using 3 HC-SR04 sound sensors for measuring obstacle's distances. It also has a Picamera to stream the video of it's view to the local web application, you can also control the vehicle yourself instead of letting it auto moving with the button on that web application.</p>
+            <p class="content"><span class="italic">Technologies used: </span>OpenCV library, Flask framework for Python.</p>
+            <p class="content"><span class="italic">Programming languages used: </span>Python, HTML, CSS</p>
+          </div>
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Personal Resume Web Application</span></p>
+              <p class="time"><span class="italic">Duration: </span>1 week</p>
+            </div>
+            <p class="content"><span class="note">https://github.com/thlam610/resumewebapp</span></p>
+            <p class="content">It's a web application, which I make to cover all the information for my Curriculum Vitae</p>
+            <p class="content"><span class="italic">Programming languages used: </span>HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-content">
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Job specific skills:</span></p>
+            </div>
+            <p class="content"><span class="italic">Programming languages: </span>C/C++, Python, HTML, CSS</p>
+            <p class="content"><span class="italic">Tools: </span>Matlab simulink</p>
+          </div>  
+          <div class="item">
+            <div class="row">
+              <p class="name"><span class="bold">Languages: </span>Good English communication skills</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="section-content">
+          <div class="item">
+            <div class="row">
+              <p class="name">6.0 IELTS Certificate</p>
+              <p class="time">Feb 2019</p>
+            </div>
+            <p class="content">The certificate is qualified by IDP <span class="italic">(outdated)</span></p> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
